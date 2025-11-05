@@ -1,17 +1,14 @@
 import Footer from "@/app/_components/footer";
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: `the Build AWFixer Blog`,
-  description: `A statically generated blog using Next.js`,
+  title: `AWFixer Build - Premium Development Services`,
+  description: `Partner with AWFixer Build for exceptional software development. We build cutting-edge applications while supporting open source projects that matter.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -58,7 +55,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn("font-sans antialiased", "dark:bg-slate-900 dark:text-slate-400")}
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
